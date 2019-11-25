@@ -1,0 +1,28 @@
+//setting ファイル
+@import 'setting/color';
+@import 'setting/size';
+@import 'setting/typography';
+
+// mixin フィル
+@import 'mixin/mixin';
+@import 'mixin/btn';
+
+// base ファイル
+@import 'base/base';
+@import 'base/reset';
+
+
+//components ファイル
+@import 'components/common/header';
+@import 'components/hero';
+@import 'components/news';
+@import 'components/service';
+@import 'components/results';
+@import 'components/price';
+@import 'components/comments';
+@import 'components/qa';
+@import 'components/access';
+@import 'components/contact';
+@import 'components/common/footer';
+
+

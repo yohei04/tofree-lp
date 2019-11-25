@@ -1,0 +1,137 @@
+
+
+//results
+.results-wrapper {
+  padding: 40px 0 40px 16px;
+  background-color: $color-main;
+  @include mediaTB {
+    margin-left: 93px;
+    padding: 80px 0 80px 110px;
+  }
+
+}
+.results-container {
+  .section-title {
+    color: $color-white;
+    margin-bottom: 40px;
+    text-align: center;
+    @include mediaTB {
+      margin-bottom: 80px;
+      text-align: left;
+    }
+  }
+}
+
+.results-cards {
+
+}
+
+// /* 4の倍数＋1枚目のスライドのスタイル（1枚目、5枚目…） */
+// .swiper-slide:nth-child(4n+1) {
+// 	background-color: #EECB27;
+// }
+// /* 4の倍数＋2枚目のスライドのスタイル（2枚目、6枚目…） */
+// .swiper-slide:nth-child(4n+2) {
+// 	background-color: #E13239;
+// }
+// /* 4の倍数＋3枚目のスライドのスタイル（3枚目、7枚目…） */
+// .swiper-slide:nth-child(4n+3) {
+// 	background-color: #1F1762;
+// }
+// /* 4の倍数＋4枚目のスライドのスタイル（4枚目、8枚目…） */
+// .swiper-slide:nth-child(4n+4) {
+// 	background-color: #BEDAE5;
+// }
+
+
+
+
+
+.swiper-wrapper {
+  width: 100%;
+  // height: 20%;
+	// height: 250px;
+}
+.swiper-slide {
+  	// color: #ffffff;
+	width: 277px!important;
+  // height: 100%;
+  // height: 251px!important;
+	text-align: center;
+  // line-height: 250px;
+  @include mediaTB {
+    width: 422px!important;
+  }
+  img {
+    width: 100%;
+    display: block
+  }
+  .card-subtitle {
+    @include font-size(15);
+    margin-bottom: 12px;
+    @include mediaTB {
+      @include font-size(20);
+      margin-bottom: 20px;
+    }
+  }
+  p {
+    @include font-size(12);
+    @include mediaTB {
+      @include font-size(16);
+    }
+  }
+}
+
+/* 全体のスタイル */
+.swiper-pagination {
+  position: relative!important;
+  // text-align: center;
+  margin: 24px auto 40px 0;
+  @include mediaTB {
+    text-align: left!important;
+    margin: 48px 0 48px;
+  }
+}
+
+
+.swiper-pagination-bullet {
+	width: 20px!important; /* 幅 */
+  height: 20px!important; /* 高さ */
+  background: $color-white!important; /* 色：緑 */
+  margin-right: 20px;
+  opacity: 1!important; /* 半透明（デフォルトでは0.2） */
+  // margin: 3px!important;
+  // padding: 4px!important;
+}
+/* 現在のスライドのスタイル */
+.swiper-pagination-bullet-active {
+  width: 20px!important; /* 幅 */
+  height: 20px!important; /* 高さ */
+	background: $color-white!important; /* 色：黄色 */
+  opacity: 1; /* 不透明 */
+  padding: 4px;
+  border: solid 1px $color-white;
+  // border-spacing: 5px;
+  box-shadow:0px 0px 0px 2px $color-main inset;
+}
+
+
+
+.results-card-bottom {
+  width: 100%;
+  padding: 12px;
+  background-color: $color-white;
+  @include mediaTB {
+    text-align-last: left;
+    padding: 20px;
+  }
+}
+
+.results-btn {
+  @include btn(343, 54, 18, 0, $color-white, $color-main);
+  // margin-top: 40px;
+  border: solid 1px $color-white;
+  @include mediaTB {
+    margin: 0;
+  }
+}

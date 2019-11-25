@@ -1,0 +1,92 @@
+// @mixin my-pattern($lh-val, $ff-val, $fs-val) {
+//   line-height: $lh-val;
+//   font-family: $ff-val;
+//   font-size: $fs-val;
+// }
+
+// // 使い方
+// .somewhere {
+//   @include my-pattern(1.5, self, 13px)
+// }
+
+
+$break-pointSP: 680px;
+
+//スマホ用 画面サイズが「$break-point」まではここを読み込む
+@mixin mediaSP {
+  @media screen and (max-width:$break-pointSP) {
+    @content;
+  }
+}
+
+@mixin mediaTB {
+  @media screen and (min-width:$break-pointSP + 1px) {
+    @content;
+  }
+}
+
+// PC用 画面サイズが「$break-point」からはここを読み込む
+@mixin mediaPC {
+  @media screen and (min-width:$break-pointSP + 300px) {
+    @content;
+  }
+}
+
+//ボックスシャドウ
+@mixin box-sh {
+  box-shadow: 0 5px 12px 0 $color-main-light;
+}
+
+//問い合わせの必須
+@mixin required {
+  position: absolute;
+  content: '必須';
+  width: 55px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-red;
+  border-radius: 5px;
+  top: 0px;
+  left: 84px;
+  @include mediaTB {
+    top: 14px;
+  }
+}
+
+//font-size
+$base : 16;
+@mixin font-size($size) {
+  font-size: $size + px;
+  // font-size: ($size / $base) + rem;
+}
+
+//↓使い方
+// .title{
+//   @include font-size(26);
+// }
+
+@mixin btn($max-width, $height, $font-size,$border-radius, $color, $background-color) {
+    width: 100%;
+    max-width: $max-width + px;  
+    height: $height + px;
+    background-color: $background-color;
+    border-radius: $border-radius + px;
+    text-align: center;
+    margin: 0 auto;
+    // box-shadow: 0 3px 5px 0 $color-shadow;
+    a {
+      display: block;
+      font-size: $font-size + px;
+      color: $color;
+      line-height: $height + px;
+      text-decoration: none;
+      transition: .1s;
+      &:hover {
+      background-color: $color;
+      color: $background-color;
+      border-radius: $border-radius + px;
+     }
+    }
+  }

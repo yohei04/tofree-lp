@@ -1,0 +1,62 @@
+//price
+.price-wrapper {
+  dl {
+    position: relative;
+    width: 80%;
+    max-width: 960px;
+    margin: 117px auto 90px;
+    @include font-size(20);
+    border-top: hidden;
+    &:last-child {
+      border-bottom: hidden;
+    }
+    &:before {
+      position: absolute;
+      content: 'Price';
+      width: 94px;
+      height: 44px;
+      line-height: 44px;
+      @include font-size(30);
+      font-weight: bold;
+      text-align: center;
+      left: 50%;
+      -ms-transform: translate(-50%,-80px);
+      -webkit-transform: translate(-50%,-80px);
+      transform: translate(-50%,-80px);
+      @include mediaTB {
+        @include font-size(36);
+      }
+    }
+    &:after {
+      content: '※ 上記料金はサンプルです。';
+      @include font-size(12);
+      line-height: 25px;
+      
+    }
+  }
+  .list {
+    display: flex;
+    border-right: solid 1px $color-sub;
+    &:first-child {
+      border-top: solid 1px $color-sub;
+    }
+    @include mediaPC {
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+  
+  dt {
+    width: 40%;
+    color: $color-white;
+    background-color: $color-main;
+    text-align: center;
+    border-bottom: solid 1px $color-sub;
+  }
+  dd {
+    width: 70%;
+    padding-left: 1rem;
+    border-bottom: solid 1px $color-main;
+    background-color: $color-white;
+  }
+}

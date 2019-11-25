@@ -1,0 +1,89 @@
+//Q&A
+
+.qa-wrapper {
+  background-image: url('../img/sunyu-kim-1053375-unsplash.png');
+  padding: 40px 0;
+  height: 800px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mediaTB {
+    height: 900px;
+  }
+}
+.qa-container {
+  // width: 100%;
+  // max-width: 616px;
+  margin: 0px auto;
+  @include mediaTB {
+    margin-left: 50%;
+  }
+  .section-title {
+    text-align: center;
+     @include mediaTB {
+      text-align: left;
+    }
+  }
+
+
+}
+.qa-list {
+  width: 100%;
+  max-width: 343px;
+  margin: 0 auto;
+  padding-top: 40px;
+  @include mediaTB {
+    width: 90%;
+    max-width: 616px;
+    margin-right: 109px;
+    margin: 0;
+  }
+}
+.qa-item {
+  padding: 18px;
+  margin: 0 .5rem 30px;
+  background-color: $color-white;
+  border-radius: 7px;
+  @include mediaTB {
+    margin: 0 0 40px 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.qa-question {
+  display: flex;
+  align-items: center;
+  // height: 26px;
+  // line-height: 26px;
+  // margin-bottom: 18px;
+  span {
+    display: block;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    margin-right: 13px;
+    color: $color-white;
+    background-color: $color-blue;
+    border-radius: 50%;
+    text-align: center;
+  }
+  p {
+    max-width: 80%;
+  }
+  img {
+    margin-left: auto;
+  }
+  .minus {
+    display: none;
+  }
+}
+
+.qa-answer {
+  display: none;
+  padding: 18px 14px;
+  margin: 18px 0 0 0;
+  background-color: $color-blue-light;
+  border-radius: 7px;
+}

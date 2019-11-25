@@ -1,0 +1,158 @@
+//header
+header {
+  width: 100%;
+  height: 68px;
+  background-color: $color-header;
+  position: fixed;
+  z-index: 100;
+  .logo {
+    margin-left: 1rem;
+    line-height: 68px;
+    img {
+      vertical-align: middle;
+      @include mediaTB {
+        display: none;
+      }
+    }
+  }
+}
+.global-nav {
+  position: fixed;
+  right: -320px; /* これで隠れる */
+  top: 0;
+  width: 300px; /* スマホに収まるくらい */
+  height: 100vh;
+  padding-top: 197px;
+  @include font-size(18);
+  background-color: #fff;
+  transition: all .6s;
+  z-index: 200;
+  overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  @include mediaTB {
+    // position: static;
+    // right: 0px;
+    width: 100%; /* スマホに収まるくらい */
+    height: 68px;
+    right: 0px;
+    padding-top: 0;
+    background-color: $color-header;
+    transition: none;
+    // z-index: -2;
+    // line-height: 68px;
+    vertical-align: middle;
+  }
+}
+.global-nav__list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: all 1s;
+  @include mediaTB {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    height: 68px;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 0;
+    align-items: center;
+  }
+}
+.global-nav__item {
+  // margin: 0 30px;
+  text-align: center;
+  a {
+    display: inline-block;
+    margin: 0 0 20px 0;
+    // border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: $color-main;
+    transition: 0.2s;
+    &:hover {
+      transform: scale(1.5,1.5);
+      opacity: 0.5;
+    }
+    @include mediaTB {
+      margin: 0;
+    }
+  }
+}
+
+.hamburger {
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  width: 26px; /* クリックしやすいようにちゃんと幅を指定する */
+  height: 20px; /* クリックしやすいようにちゃんと高さを指定する */
+  cursor: pointer;
+  z-index: 300;
+  vertical-align: middle;
+  // margin: 1.5rem 1rem 0 0;
+  @include mediaTB {
+    display: none;
+  }
+}
+.hamburger__line {
+  position: absolute;
+  // left: 0px;
+  width: 26px;
+  height: 4px;
+  background-color: #111;
+  transition: all .6s;
+  @include mediaTB {
+    margin-right: 40px;
+    font-size: 1rem;
+    padding: 0;
+  }
+}
+.hamburger__line--1 {
+  top: 0px;
+}
+.hamburger__line--2 {
+  top: 8px;
+}
+.hamburger__line--3 {
+  top: 16px;
+}
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: $color-main;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .6s;
+  cursor: pointer;
+  @include mediaTB {
+    display: none;
+    position: fixed;
+  }
+}
+/* 表示された時用のCSS */
+.nav-open {
+  .global-nav {
+    right: 0;
+  }
+  .black-bg {
+    opacity: .7;
+    visibility: visible;
+  }
+  .hamburger__line--1 {
+    right: 300px;
+    transform: rotate(405deg);
+    top: 8px;
+    }
+  .hamburger__line--2 {
+    width: 0;
+    left: 50%;
+  }
+  .hamburger__line--3 {
+    right: 300px;
+    transform: rotate(-405deg);
+    top: 8px;
+  }
+}

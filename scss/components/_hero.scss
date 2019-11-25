@@ -1,0 +1,108 @@
+//hero
+.hero-wrapper {
+  position: relative;
+  .hero-img {
+    height: 667px;
+    // height: 100vh;
+    background: url(../img/mv.png);
+    background-size:  cover;  
+    background-position: -250px;
+    @include mediaPC {
+      background-position: center center;
+    }
+  }
+  .hero-container {
+    position: absolute;
+    max-width: 100%;
+    width: 343px;
+    top: 50%;
+    left: 50%;
+    // padding: 0 1rem;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+  h3 {
+    width: 336px;
+    font-size: 1.5rem;
+  }
+  p {
+    width: 343px;
+    // height: 76px;
+    font-size: 1rem;
+    margin-top: 40px;
+
+  }
+  .btn {
+    width: 232px;
+    height: 50px;
+    background-color: $color-btn1;
+    border-radius: 10px;
+    text-align: center;
+    margin: 40px auto 0;
+    box-shadow: 0 3px 5px 0 $color-shadow;
+    
+    a {
+      display: block;
+      color: $color-white;
+      line-height: 50px;
+      text-decoration: none;
+    }
+  }
+  .hero-btn {
+    @include btn(232, 50, 18, 10, $color-white, $color-btn1);
+    margin-top: 40px;
+    @include box-sh;
+    @include mediaPC {
+      min-width: 280px;
+      margin: 40px 0 0 0;
+    }
+  }
+  // $max-width, $height, $font-size,$border-radius, $color, $background-color
+}
+
+@include mediaPC {
+  .hero-wrapper {
+    .hero-container {
+      position: absolute;
+      max-width: 100%;
+      width: 524px;
+      height: 264px;
+      top: 54%;
+      left: 73%;
+      // padding: 0 1rem;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    }
+    h3 {
+      width: 420px;
+      height: 84px;
+      font-size: 30px;
+
+    }
+    p {
+      width: 524px;
+      height: 49px;
+      font-size: 18px;
+      // margin-top: 40px;
+
+    }
+    .btn {
+      width: 280px;
+      height: 51px;
+      // background-color: $color-btn1;
+      // border-radius: 10px;
+      // text-align: center;
+      margin: 40px 0 0 0;
+      // box-shadow: 0 3px 5px 0 $color-shadow;
+      
+      a {
+        display: block;
+        color: $color-white;
+        line-height: 50px;
+        text-decoration: none;
+      }
+    }
+  }
+}
